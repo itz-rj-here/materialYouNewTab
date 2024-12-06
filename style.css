@@ -1853,14 +1853,6 @@ input:checked + .toggle:before {
 }
 
 .languageSection {
-	width: 100%;
-	height: 50px;
-	display: flex;
-	justify-content: space-between;
-	gap: var(--gap);
-	margin-top: 30px;
-}
-.languageSection {
 	height: 50px;
 	display: flex;
 	justify-content: space-around;
