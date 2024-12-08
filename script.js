@@ -714,6 +714,8 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
     document.querySelector('.dropdown-btn').addEventListener('click', function (event) {
+        const resultBox = document.getElementById('resultBox');
+        if(resultBox.classList.toString().includes('show')) return;
         dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
     });
 
@@ -1208,6 +1210,10 @@ const applySelectedTheme = (colorValue) => {
 
             #searchIconDark {
                 fill: #bbb !important;
+            }
+	    
+	    .dropdown-item.selected:not(*[data-default]):before {
+                background-color: #707070;
             }
 
             .tilesContainer .tiles {
@@ -1988,6 +1994,15 @@ document.getElementById("searchQ").addEventListener("input", async function () {
                         };
                         resultBox.appendChild(resultItem);
                     });
+
+                    // Check if the dropdown of search shortcut is open
+                    const dropdown = document.querySelector('.dropdown-content');
+                    
+                    if(dropdown.style.display == "block") {
+                        dropdown.style.display = "none";
+                    }
+                    
+
                     showResultBox();
                 }
             } catch (error) {
@@ -2564,7 +2579,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Validate URL before normalizing
         if (!isValidUrl(url)) {
             // alert("Invalid URL. Please enter a valid URL with http or https protocol.");
-            url = "https://xengshi.github.io/materialYouNewTab/shortcuts_icons/PageNotFound.html";
+            url = "https://xengshi.github.io/materialYouNewTab/docs/PageNotFound.html";
         }
 
         // Normalize URL if valid
@@ -2736,7 +2751,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (hostname === "github.com") {
             logo.src = "./shortcuts_icons/github-shortcut.svg";
-        } else if (urlString === "https://xengshi.github.io/materialYouNewTab/shortcuts_icons/PageNotFound.html") {
+        } else if (urlString === "https://xengshi.github.io/materialYouNewTab/docs/PageNotFound.html") {
             // Special case for invalid URLs
             logo.src = "./shortcuts_icons/invalid-url.svg";
         } else {
