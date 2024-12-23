@@ -91,7 +91,7 @@ const translations = {
         "bookmarkViewAs" : "View as",
         "bookmarkViewGrid" : "Grid",    // Keep this shorter
         "bookmarkViewList" : "List",    // Keep this shorter
-        "bookmarkSearch": "Search bookmarks...",
+        "bookmarkSearch": "Search bookmark",
 
         // New Tab Item
         "conditionText": "Hello! How are you today?",
@@ -445,7 +445,7 @@ const translations = {
         "bookmarkViewAs" : "इस रूप में देखें",
         "bookmarkViewGrid" : "ग्रिड",
         "bookmarkViewList" : "लिस्ट",
-        "bookmarkSearch": "बुकमार्क्स खोजें...",
+        "bookmarkSearch": "बुकमार्क खोजें",
 
         // New Tab Item
         "conditionText": "नमस्ते! आप आज कैसे हैं?",
@@ -905,7 +905,7 @@ const translations = {
         "bookmarkViewAs" : "এইভাবে দেখুন",
         "bookmarkViewGrid" : "গ্রিড",
         "bookmarkViewList" : "লিস্ট",
-        "bookmarkSearch": "বুকমার্কস সার্চ করুন...",
+        "bookmarkSearch": "বুকমার্ক সার্চ করুন",
 
         // Greeting
         greeting: {
