@@ -71,7 +71,7 @@ async function getWeatherData() {
     }
 
     // Add event listeners for handling Enter key presses
-    userAPIInput.addEventListener("keydown", (event) => handleEnterPress(event, "saveAPI"));
+    userAPIInput.addEventListener("keydown", function(event) { return handleEnterPress(event, "saveAPI") });
     userLocInput.addEventListener("keydown", (event) => handleEnterPress(event, "saveLoc"));
 
     // Save API key to localStorage

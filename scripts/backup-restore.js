@@ -8,7 +8,7 @@
 
 // -------------------- Backup-Restore Settings ----------------------
 document.getElementById("backupBtn").addEventListener("click", backupData);
-document.getElementById("restoreBtn").addEventListener("click", () => document.getElementById("fileInput").click());
+document.getElementById("restoreBtn").addEventListener("click", function() { return document.getElementById("fileInput").click() });
 document.getElementById("fileInput").addEventListener("change", validateAndRestoreData);
 
 // Backup data from localStorage and IndexedDB

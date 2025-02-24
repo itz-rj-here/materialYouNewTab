@@ -20,7 +20,7 @@ let cumulativeMinuteRotation = initialMinutes * 6 + (initialSeconds / 10);
 let cumulativeHourRotation = (30 * initialHours + initialMinutes / 2);
 
 // Apply initial rotations (no need to wait 1s now)
-document.getElementById("second").style.transform = `rotate(${cumulativeSecondRotation}deg)`;
+document.getElementById("second").style.transform = "rotate("+cumulativeSecondRotation+"deg)";
 document.getElementById("minute").style.transform = `rotate(${cumulativeMinuteRotation}deg)`;
 document.getElementById("hour").style.transform = `rotate(${cumulativeHourRotation}deg)`;
 

@@ -24,7 +24,7 @@ function openDatabase() {
             db.createObjectStore(storeName);
         };
         request.onsuccess = (event) => resolve(event.target.result);
-        request.onerror = (event) => reject("Database error: " + event.target.errorCode);
+        request.onerror = function(event) { return reject("Database error: " + event.target.errorCode) };
     });
 }
 
@@ -40,7 +40,7 @@ async function saveImageToIndexedDB(imageBlob, isRandom) {
         store.put(isRandom ? "random" : "upload", imageTypeKey);
 
         transaction.oncomplete = () => resolve();
-        transaction.onerror = (event) => reject("Transaction error: " + event.target.errorCode);
+        transaction.onerror = function(event) { return reject("Transaction error: " + event.target.errorCode) };
     });
 }
 
@@ -60,7 +60,7 @@ function getFromStore(db, key) {
         const store = transaction.objectStore(storeName);
         const request = store.get(key);
 
-        request.onsuccess = () => resolve(request.result);
+        request.onsuccess = function() { return resolve(request.result) };
         request.onerror = (event) => reject("Request error: " + event.target.errorCode);
     });
 }
